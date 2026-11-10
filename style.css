@@ -336,3 +336,100 @@ body {
         padding: 18px;
     }
 }
+
+/* PWA Connection Status */
+.connection-status {
+    max-width: 250px;
+    margin: 0 auto 25px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.connection-status.online {
+    background: #164e36;
+    color: #bbf7d0;
+    border: 1px solid #22c55e;
+}
+
+.connection-status.offline {
+    background: #7f1d1d;
+    color: #fecaca;
+    border: 1px solid #ef4444;
+}
+
+
+/* PWA Install Button */
+.pwa-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+#installBtn {
+    background: #e03c31;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#installBtn:hover {
+    background: #b92920;
+}
+
+
+#installBtn[hidden] {
+    display: none;
+}
+
+
+/* Notification Button */
+#notificationBtn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#notificationBtn:hover {
+    background: #1d4ed8;
+}
+
+#notificationBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#notificationStatus {
+    text-align: center;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* Mobile PWA Buttons */
+@media (max-width: 600px) {
+    .pwa-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #installBtn,
+    #notificationBtn {
+        width: 100%;
+        max-width: 350px;
+    }
+}
